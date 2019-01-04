@@ -1,18 +1,22 @@
 import React, {Component} from 'react'
 import {StyleSheet, Text, View, Button} from 'react-native'
 
-class App extends Component{
+class Home extends Component{
   static navigationOptions = () => ({
-    title: 'App',
+    title: 'Home',
     // headerBackTitle: null,
   })
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to React Native!</Text>
+        <Text>Home Page</Text>
         <Button
-          title={'go to Home'}
-          onPress={() => {this.props.navigation.navigate('Home')}}
+          title={'go to County'}
+          onPress={()=>{this.props.navigation.navigate('County')}}
+        />
+        <Button
+          title={'go to NewCounty'}
+          onPress={()=>{this.props.navigation.navigate('NewCounty')}}
         />
       </View>
     )
@@ -25,4 +29,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default App
+export default Home
