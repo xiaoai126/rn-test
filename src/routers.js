@@ -1,7 +1,8 @@
 import AppScreen from './app'
 import HomeScreen from './container/home'
 import CrountyScreen from './container/county'
-// import NewCountyScreen from './container/newCounty'
+import NewCountyScreen from './container/newCounty'
+import layoutScreen from './container/layoutTest'
 
 export const routeConfg = {
   App: {
@@ -13,7 +14,10 @@ export const routeConfg = {
   County: {
     screen: CrountyScreen
   },
-  // NewCounty: {
-  //   screen: NewCountyScreen
-  // },
+  NewCounty: {
+    screen: NewCountyScreen
+  },
+  Layout: {
+    screen: layoutScreen
+  },
 }

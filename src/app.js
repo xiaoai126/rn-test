@@ -4,12 +4,12 @@ import {StyleSheet, Text, View, Button} from 'react-native'
 class App extends Component{
   static navigationOptions = () => ({
     title: 'App',
-    // headerBackTitle: null,
+    headerBackTitle: null,
   })
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to React Native!</Text>
+        <Text style={{textAlign: 'center'}}>App Page Test</Text>
         <Button
           title={'go to Home'}
           onPress={() => {this.props.navigation.navigate('Home')}}
