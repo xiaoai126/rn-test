@@ -6,6 +6,20 @@ class App extends Component{
     title: 'App',
     headerBackTitle: null,
   })
+  componentDidMount() {
+    navigator.geolocation.watchPosition(
+      (position) => {
+        let longitude = JSON.stringify(position.coords.longitude);//精度
+        let latitude = JSON.stringify(position.coords.latitude);//纬度
+        console.warn(`精度：${longitude}, 纬度：${latitude}`);
+        // this.fetchData(longitude,latitude);
+      },
+      (error) =>{
+        console.log(error);
+      },
+      {enableHighAccuracy: true, timeout: 5000, maximumAge: 1000}
+      )
+  }
   render() {
     return (
       <View style={styles.container}>
